@@ -1,0 +1,407 @@
+Results 
+cardtest1.c
+Hand before effect
+Card at pos 0: 13
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Deck before effect
+Card: 5
+Card: 6
+Card: 7
+Card: 8
+Card: 9
+Card: 10
+Card: 11
+Card: 12
+Card: 14
+Card: 15
+Play card result: 0
+Hand after effect
+Card at pos 0: 7
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Card at pos 5: 5
+Card at pos 6: 6
+Deck after effect
+Card: 8
+Card: 9
+Card: 10
+Card: 11
+Card: 12
+Card: 14
+Card: 15
+Deck card: 5
+Deck card: 6
+Deck card: 7
+Deck card: 8
+Deck card: 9
+Deck card: 10
+Case 1: Deck has enough cards
+Correct 3 cards placed in hand: PASS
+Correct 3 cards removed from deck: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+File 'dominion.c'
+Lines executed:27.55% of 548
+Creating 'dominion.c.gcov'
+
+cardtest2.c
+Hand before effect
+Card at pos 0: 7
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Deck before effect
+Card: 8
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+Card: 11
+Card: 12
+Card: 13
+Card: 14
+Card: 15
+Play card result: 0
+Hand after effect
+Card at pos 0: 7
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Card at pos 5: 5
+Card at pos 6: 6
+Deck after effect
+Card: 11
+Card: 12
+Card: 13
+Card: 14
+Card: 15
+Discard after effect
+Discard at pos 0: 10
+Discard at pos 1: 9
+Discard at pos 2: 8
+Case 1: Deck has two cards
+Two treasure cards removed from deck: PASS
+Two treasure cards and cards before it removed from deck: PASS
+Revealed cards in discard: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+File 'dominion.c'
+Lines executed:27.55% of 548
+Creating 'dominion.c.gcov'
+
+cardtest3.c
+1 Hand before effect
+Card at pos 0: 25
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+ 1 Deck before effect
+Card: 8
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+2 Hand before effect
+Card at pos 0: 25
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+ 2 Deck before effect
+Card: 8
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+Play card result: 0
+1 Hand after effect
+Card at pos 0: 25
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+1 Deck after effect
+Card: 8
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+1 Discard after effect
+2 Hand after effect
+Card at pos 0: 25
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+2 Deck after effect
+Card: 5
+Card: 6
+2 Discard after effect
+Discard at pos 0: 4
+Top card of other player: 5
+Player 0's hand and deck not affected by calling sea hag: PASS
+Player 1's hand not affected by calling sea hag: PASS
+Player 1's top card is curse: FAIL
+Player 1's deck count stays the same: FAIL
+File 'dominion.c'
+Lines executed:27.55% of 548
+Creating 'dominion.c.gcov'
+
+cardtest4.c
+Hand before effect
+Card at pos 0: 16
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Deck before effect
+Card: 8
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+Play card result: 0
+Hand after effect
+Card at pos 0: 8
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Deck after effect
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+Test case 1: Full deck
+Correct drawn card placed in hand: PASS
+Correct drawn card removed from deck: PASS
+Deck has one less card: PASS
+Great hall no longer in hand: PASS
+Player gains an additional action: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+File 'dominion.c'
+Lines executed:27.55% of 548
+Creating 'dominion.c.gcov'
+
+unittest1.c
+Number of players correct: PASS
+Number of curses correct: PASS
+Number of estate correct: PASS
+Number of duchy correct: PASS
+Number of province correct: PASS
+Number of copper correct: PASS
+Number of silver correct: PASS
+Number of gold correct: PASS
+Player 0 starts correct: PASS
+Action count correct: PASS
+Buy count correct: PASS
+Player 0 Discard count correct: PASS
+Player 1 Discard count correct: PASS
+Player 0 copper count correct: PASS
+Player 0 estate count correct: PASS
+Player 1 copper count correct: PASS
+Player 1 estate count correct: PASS
+Player 1 hand count correct: PASS
+Played card count correct: PASS
+Player 1 deck count correct: PASS
+Player 1 deck count correct: PASS
+File 'dominion.c'
+Lines executed:27.55% of 548
+Creating 'dominion.c.gcov'
+
+unittest2.c
+Testing discard method
+Testing trash flag set to 0 from pos 0 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 0 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 1 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 1 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 2 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 2 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 3 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 3 of player 0
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: FAIL
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 4 of player 0
+Target card discarded from right position in hand: PASS
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 4 of player 0
+Target card discarded from right position in hand: PASS
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 0 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 0 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 1 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 1 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 2 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 2 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 3 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 3 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 0 from pos 4 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+If card not trashed, added to played pile: PASS
+If card not trashed, played pile incremented: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+Testing trash flag set to 1 from pos 4 of player 1
+Target card discarded from right position in hand: FAIL
+Hand Count decremented by exactly 1: PASS
+Remaining cards in hand unaffected: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+File 'dominion.c'
+Lines executed:27.55% of 548
+Creating 'dominion.c.gcov'
+
+unittest3.c
+Unit test for supply count methodCorrect number of curse cards reported: PASS
+Number of curse cards not altered: PASS
+No state change in kingdom: PASS
+File 'dominion.c'
+Lines executed:27.92% of 548
+Creating 'dominion.c.gcov'
+
+unittest4.c
+Testing get cost method
+Curse: PASS
+estate: PASS
+province: PASS
+copper: PASS
+silver: PASS
+gold: PASS
+adventurer: PASS
+council_room: PASS
+feast: PASS
+gardens: PASS
+mine: PASS
+remodel: PASS
+smithy: PASS
+village: PASS
+baron: PASS
+great_hall: PASS
+village: PASS
+minion: PASS
+steward: PASS
+tribute: PASS
+ambassador: PASS
+cutpurse: PASS
+embargo: PASS
+outpost: PASS
+salvager: PASS
+sea_hag: PASS
+treasure_map: PASS
+File 'dominion.c'
+Lines executed:33.03% of 548
+Creating 'dominion.c.gcov'
+
