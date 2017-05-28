@@ -653,7 +653,7 @@ int adventurerEffect(struct gameState *state, int currentPlayer, int* drawntreas
 	int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
 	if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
     //Mutant: does not dereference pointer leading to the address being incremented
-	  (drawntreasure)++;
+	  drawntreasure = &drawntreasure+1;
 	else{
 	  temphand[z]=cardDrawn;
 	  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
@@ -677,7 +677,7 @@ int smithyEffect(struct gameState *state, int currentPlayer, int handPos) {
 
       //discard card from hand
       //Mutant placing card into trash flag instead of discard
-      discardCard(handPos, currentPlayer, state, 1);
+      discardCard(handPos, currentPlayer, state, 0);
       return 0;
 
 }
