@@ -1,0 +1,109 @@
+Hand before effect
+Card at pos 0: 7
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Deck before effect
+Card: 8
+Card: 9
+Card: 10
+Card: 5
+Card: 6
+Card: 11
+Card: 12
+Card: 13
+Card: 14
+Card: 15
+Play card result: 0
+Hand after effect
+Card at pos 0: 7
+Card at pos 1: 1
+Card at pos 2: 2
+Card at pos 3: 3
+Card at pos 4: 4
+Card at pos 5: 5
+Deck after effect
+Card: 6
+Card: 11
+Card: 12
+Card: 13
+Card: 14
+Card: 15
+Discard after effect
+Discard at pos 0: 10
+Discard at pos 1: 9
+Discard at pos 2: 8
+Case 1: Deck has two cards
+Two treasure cards removed from deck: FAIL
+Two treasure cards and cards before it removed from deck: FAIL
+Revealed cards in discard: PASS
+No state change in kingdom: PASS
+No change in supply: PASS
+ount] = state->deck[player][deckCounter - 1];//Add card to the hand
+576	    state->deckCount[player]--;
+577	    state->handCount[player]++;//Increment hand count
+580	  return 0;
+581	}
+adventurerEffect (state=0x7fffffff0d50, currentPlayer=0, drawntreasure=0x7fffffff04bc, temphand=0x7fffffff04c0, z=0) at dominion.c:653
+653		int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+654		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+658		  temphand[z]=cardDrawn;
+659		  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+660		  z++;
+648	    while( (*drawntreasure) <2){
+649		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+652		drawCard(currentPlayer, state);
+drawCard (player=0, state=0x7fffffff0d50) at dominion.c:528
+528	  if (state->deckCount[player] <= 0){//Deck is empty
+568	    int count = state->handCount[player];//Get current hand count for player
+574	    deckCounter = state->deckCount[player];//Create holder for the deck count
+575	    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
+576	    state->deckCount[player]--;
+577	    state->handCount[player]++;//Increment hand count
+580	  return 0;
+581	}
+adventurerEffect (state=0x7fffffff0d50, currentPlayer=0, drawntreasure=0x7fffffff04bc, temphand=0x7fffffff04c0, z=1) at dominion.c:653
+653		int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+654		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+658		  temphand[z]=cardDrawn;
+659		  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+660		  z++;
+648	    while( (*drawntreasure) <2){
+649		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+652		drawCard(currentPlayer, state);
+drawCard (player=0, state=0x7fffffff0d50) at dominion.c:528
+528	  if (state->deckCount[player] <= 0){//Deck is empty
+568	    int count = state->handCount[player];//Get current hand count for player
+574	    deckCounter = state->deckCount[player];//Create holder for the deck count
+575	    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
+576	    state->deckCount[player]--;
+577	    state->handCount[player]++;//Increment hand count
+580	  return 0;
+581	}
+adventurerEffect (state=0x7fffffff0d50, currentPlayer=0, drawntreasure=0x7fffffff04bc, temphand=0x7fffffff04c0, z=2) at dominion.c:653
+653		int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+654		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+658		  temphand[z]=cardDrawn;
+659		  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+660		  z++;
+648	    while( (*drawntreasure) <2){
+649		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+652		drawCard(currentPlayer, state);
+drawCard (player=0, state=0x7fffffff0d50) at dominion.c:528
+528	  if (state->deckCount[player] <= 0){//Deck is empty
+568	    int count = state->handCount[player];//Get current hand count for player
+574	    deckCounter = state->deckCount[player];//Create holder for the deck count
+575	    state->hand[player][count] = state->deck[player][deckCounter - 1];//Add card to the hand
+576	    state->deckCount[player]--;
+577	    state->handCount[player]++;//Increment hand count
+580	  return 0;
+581	}
+adventurerEffect (state=0x7fffffff0d50, currentPlayer=0, drawntreasure=0x7fffffff04bc, temphand=0x7fffffff04c0, z=3) at dominion.c:653
+653		int cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+654		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+656		  drawntreasure = &drawntreasure+1;
+648	    while( (*drawntreasure) <2){
+$1 = (int *) 0x7fffffff0460
+Continuing.
+[Inferior 1 (process 1860) exited normally]
