@@ -1,0 +1,33 @@
+Title: Extra card drawn when card effect passes card value Smithy
+Product: SmithyEffect method in dominion.c
+Classification: Serious bug
+Reproduced: Only when there are more than three cards in the deck
+Summary: When playcard is called with Smithy passed as a parameter, 4 cards instead of 3 are drawn and added to the hand
+Trigger: When I ran the unit test after assembling a deck of 10 unique cards, the play card method caused the cards removed from the deck test
+to return a failure
+Steps to generate bug:
+1.Initialize a game state variable using initialize game
+2.Replace a card in the hand with Smithy
+3.Save the current game state into a new variable
+4.Call the playCard method passing the hand position of smithy into the method
+5.Compare the present game state with the original copy
+Expected results: Top three cards of deck drawn unless there is less than three cards in deck and discard in which case all cards are drawn
+Result: The top four cards of the deck are removed from deck and copied into the player’s hand instead of the expected three
+
+
+
+Title: Only option 1 of steward effect is executed regardless of choice selected by user
+Product: StewardEffect method in dominion.c
+Classification: Serious bug
+Reproduced: Every time
+Summary: Any time steward is passed into play card, regardless of the choice selected by the user, the first option is executed
+Trigger: When running unit test for the card effect when the user chose the second(add 2+ coins) or the third option(trash 2 cards)
+the tests returned failures indicating coin number did not change as expected and the hand count changed which was not expected
+Steps to generate bug:
+1.Initialize a game state variable using initialize game
+2.Replace a card in the hand with Steward
+3.Save the current game state into a new variable
+4.Call the playCard method passing the hand position of Steward  and the value 2 for parameter choice 1 into the method
+5.Compare the present game state with the original copy
+6.Check hand counts and treasure counts between the current and previous game states
+Result: Regardless of the choice 1 value, 2 card are drawn into the hand and the treasure count does not increment
